@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5080D11285BC73100BEF281 /* PicoyPlacaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5080D10285BC73100BEF281 /* PicoyPlacaTests.swift */; };
 		E5337110285AB684008BB0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E533710F285AB683008BB0E0 /* AppDelegate.swift */; };
 		E5337112285AB684008BB0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337111285AB684008BB0E0 /* SceneDelegate.swift */; };
 		E5337114285AB684008BB0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337113285AB684008BB0E0 /* ViewController.swift */; };
@@ -21,7 +22,19 @@
 		E5337141285BA515008BB0E0 /* picoPlaca.png in Resources */ = {isa = PBXBuildFile; fileRef = E5337140285BA515008BB0E0 /* picoPlaca.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E5080D12285BC73100BEF281 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5337104285AB683008BB0E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E533710B285AB683008BB0E0;
+			remoteInfo = PicoyPlaca;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E5080D0E285BC73100BEF281 /* PicoyPlacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicoyPlacaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5080D10285BC73100BEF281 /* PicoyPlacaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicoyPlacaTests.swift; sourceTree = "<group>"; };
 		E533710C285AB683008BB0E0 /* PicoyPlaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicoyPlaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E533710F285AB683008BB0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5337111285AB684008BB0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E5080D0B285BC73100BEF281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5337109285AB683008BB0E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5080D0F285BC73100BEF281 /* PicoyPlacaTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5080D10285BC73100BEF281 /* PicoyPlacaTests.swift */,
+			);
+			path = PicoyPlacaTests;
+			sourceTree = "<group>";
+		};
 		E5337103285AB683008BB0E0 = {
 			isa = PBXGroup;
 			children = (
 				E533710E285AB683008BB0E0 /* PicoyPlaca */,
+				E5080D0F285BC73100BEF281 /* PicoyPlacaTests */,
 				E533710D285AB683008BB0E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E533710C285AB683008BB0E0 /* PicoyPlaca.app */,
+				E5080D0E285BC73100BEF281 /* PicoyPlacaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E5080D0D285BC73100BEF281 /* PicoyPlacaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5080D16285BC73100BEF281 /* Build configuration list for PBXNativeTarget "PicoyPlacaTests" */;
+			buildPhases = (
+				E5080D0A285BC73100BEF281 /* Sources */,
+				E5080D0B285BC73100BEF281 /* Frameworks */,
+				E5080D0C285BC73100BEF281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5080D13285BC73100BEF281 /* PBXTargetDependency */,
+			);
+			name = PicoyPlacaTests;
+			productName = PicoyPlacaTests;
+			productReference = E5080D0E285BC73100BEF281 /* PicoyPlacaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E533710B285AB683008BB0E0 /* PicoyPlaca */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5337120285AB686008BB0E0 /* Build configuration list for PBXNativeTarget "PicoyPlaca" */;
@@ -139,6 +187,10 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					E5080D0D285BC73100BEF281 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E533710B285AB683008BB0E0;
+					};
 					E533710B285AB683008BB0E0 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -158,11 +210,19 @@
 			projectRoot = "";
 			targets = (
 				E533710B285AB683008BB0E0 /* PicoyPlaca */,
+				E5080D0D285BC73100BEF281 /* PicoyPlacaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E5080D0C285BC73100BEF281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E533710A285AB683008BB0E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +239,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E5080D0A285BC73100BEF281 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5080D11285BC73100BEF281 /* PicoyPlacaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5337108285AB683008BB0E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +261,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5080D13285BC73100BEF281 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E533710B285AB683008BB0E0 /* PicoyPlaca */;
+			targetProxy = E5080D12285BC73100BEF281 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E5337115285AB684008BB0E0 /* Main.storyboard */ = {
@@ -214,6 +290,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E5080D14285BC73100BEF281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58YTQCSCSL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gis.PicoyPlacaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicoyPlaca.app/PicoyPlaca";
+			};
+			name = Debug;
+		};
+		E5080D15285BC73100BEF281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58YTQCSCSL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gis.PicoyPlacaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicoyPlaca.app/PicoyPlaca";
+			};
+			name = Release;
+		};
 		E533711E285AB686008BB0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -389,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E5080D16285BC73100BEF281 /* Build configuration list for PBXNativeTarget "PicoyPlacaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5080D14285BC73100BEF281 /* Debug */,
+				E5080D15285BC73100BEF281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5337107285AB683008BB0E0 /* Build configuration list for PBXProject "PicoyPlaca" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

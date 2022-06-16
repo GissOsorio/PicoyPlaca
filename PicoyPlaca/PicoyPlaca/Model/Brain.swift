@@ -39,4 +39,9 @@ struct Brain {
         return true
     }
     
+    func dateToDayWeek(dateString: String) -> String{
+        
+        return "Lunes"
+    }
+    
 }
