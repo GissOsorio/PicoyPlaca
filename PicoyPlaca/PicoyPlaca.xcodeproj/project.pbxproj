@@ -14,6 +14,11 @@
 		E5337119285AB686008BB0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5337118285AB686008BB0E0 /* Assets.xcassets */; };
 		E533711C285AB686008BB0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E533711A285AB686008BB0E0 /* LaunchScreen.storyboard */; };
 		E5337126285AB9D7008BB0E0 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337125285AB9D7008BB0E0 /* Brain.swift */; };
+		E5337134285B7236008BB0E0 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337133285B7236008BB0E0 /* Day.swift */; };
+		E5337138285B850D008BB0E0 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337137285B850D008BB0E0 /* Interval.swift */; };
+		E533713D285BA505008BB0E0 /* canBeOnTheRoad.png in Resources */ = {isa = PBXBuildFile; fileRef = E533713C285BA505008BB0E0 /* canBeOnTheRoad.png */; };
+		E533713F285BA50D008BB0E0 /* canNotBeOnTheRoad.png in Resources */ = {isa = PBXBuildFile; fileRef = E533713E285BA50D008BB0E0 /* canNotBeOnTheRoad.png */; };
+		E5337141285BA515008BB0E0 /* picoPlaca.png in Resources */ = {isa = PBXBuildFile; fileRef = E5337140285BA515008BB0E0 /* picoPlaca.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +31,11 @@
 		E533711B285AB686008BB0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E533711D285AB686008BB0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5337125285AB9D7008BB0E0 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
-		E5337130285AE70E008BB0E0 /* canBeOnTheRoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canBeOnTheRoad.png; sourceTree = "<group>"; };
-		E5337131285AE711008BB0E0 /* canNotBeOnTheRoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canNotBeOnTheRoad.png; sourceTree = "<group>"; };
-		E5337132285AE713008BB0E0 /* PICO Y PLACA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PICO Y PLACA.png"; sourceTree = "<group>"; };
+		E5337133285B7236008BB0E0 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		E5337137285B850D008BB0E0 /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		E533713C285BA505008BB0E0 /* canBeOnTheRoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canBeOnTheRoad.png; sourceTree = "<group>"; };
+		E533713E285BA50D008BB0E0 /* canNotBeOnTheRoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canNotBeOnTheRoad.png; sourceTree = "<group>"; };
+		E5337140285BA515008BB0E0 /* picoPlaca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picoPlaca.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +76,9 @@
 				E5337118285AB686008BB0E0 /* Assets.xcassets */,
 				E533711A285AB686008BB0E0 /* LaunchScreen.storyboard */,
 				E533711D285AB686008BB0E0 /* Info.plist */,
-				E533712F285AE703008BB0E0 /* Images */,
+				E533713C285BA505008BB0E0 /* canBeOnTheRoad.png */,
+				E533713E285BA50D008BB0E0 /* canNotBeOnTheRoad.png */,
+				E5337140285BA515008BB0E0 /* picoPlaca.png */,
 			);
 			path = PicoyPlaca;
 			sourceTree = "<group>";
@@ -94,18 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				E5337125285AB9D7008BB0E0 /* Brain.swift */,
+				E5337133285B7236008BB0E0 /* Day.swift */,
+				E5337137285B850D008BB0E0 /* Interval.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E533712F285AE703008BB0E0 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				E5337130285AE70E008BB0E0 /* canBeOnTheRoad.png */,
-				E5337131285AE711008BB0E0 /* canNotBeOnTheRoad.png */,
-				E5337132285AE713008BB0E0 /* PICO Y PLACA.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +169,9 @@
 			files = (
 				E533711C285AB686008BB0E0 /* LaunchScreen.storyboard in Resources */,
 				E5337119285AB686008BB0E0 /* Assets.xcassets in Resources */,
+				E533713F285BA50D008BB0E0 /* canNotBeOnTheRoad.png in Resources */,
+				E533713D285BA505008BB0E0 /* canBeOnTheRoad.png in Resources */,
+				E5337141285BA515008BB0E0 /* picoPlaca.png in Resources */,
 				E5337117285AB684008BB0E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +185,9 @@
 			files = (
 				E5337114285AB684008BB0E0 /* ViewController.swift in Sources */,
 				E5337110285AB684008BB0E0 /* AppDelegate.swift in Sources */,
+				E5337138285B850D008BB0E0 /* Interval.swift in Sources */,
 				E5337126285AB9D7008BB0E0 /* Brain.swift in Sources */,
+				E5337134285B7236008BB0E0 /* Day.swift in Sources */,
 				E5337112285AB684008BB0E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
