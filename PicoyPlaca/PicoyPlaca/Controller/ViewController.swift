@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
+    @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var dateTextValidation: UILabel!
     @IBOutlet weak var plateTextValidation: UILabel!
     @IBOutlet weak var searchBtn: UIButton!
@@ -32,9 +32,13 @@ class ViewController: UIViewController {
         if answer {
             sender.backgroundColor = UIColor.green
             answerImage.image = images[1]
+            answerLabel.text = "Your car is allowed to be on the road!"
+            answerLabel.textColor = UIColor.green
         }else{
             sender.backgroundColor = UIColor.red
             answerImage.image = images[2]
+            answerLabel.text = "Your car is not allowed to be on the road!"
+            answerLabel.textColor = UIColor.red
         }
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
@@ -49,6 +53,8 @@ class ViewController: UIViewController {
         dateTextValidation.text = "Required"
         dateTextValidation.textColor = UIColor.red
         searchBtn.isEnabled = false
+        answerLabel.text = "Find out if your car is allowed to be on the road"
+        answerLabel.textColor = UIColor.purple
     }
     
 

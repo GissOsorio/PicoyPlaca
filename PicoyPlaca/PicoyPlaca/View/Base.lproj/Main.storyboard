@@ -136,21 +136,34 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnt-dy-fUz">
                                         <rect key="frame" x="0.0" y="546.5" width="414" height="271.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZO-Ia-jyO">
-                                                <rect key="frame" x="147" y="114" width="120" height="44"/>
-                                                <color key="tintColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="SEARCH">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="searchPlate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I44-UC-gLW"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zpB-yk-syF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="271.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-av-ACI">
+                                                        <rect key="frame" x="184" y="0.0" width="46" height="136"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZO-Ia-jyO">
+                                                        <rect key="frame" x="147" y="136" width="120" height="135.5"/>
+                                                        <color key="tintColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="SEARCH">
+                                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="searchPlate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I44-UC-gLW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2ZO-Ia-jyO" firstAttribute="centerX" secondItem="lnt-dy-fUz" secondAttribute="centerX" id="XVd-TN-I6L"/>
-                                            <constraint firstItem="2ZO-Ia-jyO" firstAttribute="centerY" secondItem="lnt-dy-fUz" secondAttribute="centerY" id="dfv-lF-DtW"/>
+                                            <constraint firstAttribute="trailing" secondItem="zpB-yk-syF" secondAttribute="trailing" id="A8c-YI-yOA"/>
+                                            <constraint firstAttribute="bottom" secondItem="zpB-yk-syF" secondAttribute="bottom" id="NRx-Y7-XTJ"/>
+                                            <constraint firstItem="zpB-yk-syF" firstAttribute="top" secondItem="lnt-dy-fUz" secondAttribute="top" id="VkN-yR-sbf"/>
+                                            <constraint firstItem="zpB-yk-syF" firstAttribute="leading" secondItem="lnt-dy-fUz" secondAttribute="leading" id="cz0-vr-n2S"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -168,6 +181,7 @@
                     </view>
                     <connections>
                         <outlet property="answerImage" destination="Xqv-5q-ZsZ" id="gnZ-k4-zj7"/>
+                        <outlet property="answerLabel" destination="HTe-av-ACI" id="VAt-Al-u3X"/>
                         <outlet property="dateTextValidation" destination="9N6-sK-Ksy" id="K8B-3n-gm6"/>
                         <outlet property="dateTxt" destination="pQy-xJ-IY1" id="Ne6-FL-6Oa"/>
                         <outlet property="plateTextValidation" destination="ksl-7Q-zDC" id="ocf-dg-qu1"/>

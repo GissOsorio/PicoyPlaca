@@ -22,6 +22,7 @@ struct Brain {
     ]
     var plateEnable = false
     var dateEnable = false
+    
     func search(plate: String, date: String, time: Date) -> Bool{
         let timeSearch = time.addingTimeInterval(TimeInterval(-5.0 * 3600.0))
         let lastNumber = String(plate.suffix(1))
