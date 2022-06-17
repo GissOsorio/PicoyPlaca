@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
             answerImage.image = images[2]
         }
-        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
     @objc func updateUI(){
@@ -45,32 +45,39 @@ class ViewController: UIViewController {
         dateTxt.text = ""
         answerImage.image = images[0]
         plateTextValidation.text = "Required"
+        plateTextValidation.textColor = UIColor.red
         dateTextValidation.text = "Required"
+        dateTextValidation.textColor = UIColor.red
+        searchBtn.isEnabled = false
     }
     
 
     @IBAction func plateValidated(_ sender: UITextField) {
-        print("vdsds")
         searchBtn.isEnabled = false
         if let plate = plateTxt.text {
             let validation = brain.plateValidation(plate: plate)
             if validation{
                 searchBtn.isEnabled = true
-                plateTextValidation.text = "Incorrect Plate"
+                plateTextValidation.text = "Great!"
+                plateTextValidation.textColor = UIColor.purple
+            }else{
+                plateTextValidation.text = "Incorrect Plate!"
+                plateTextValidation.textColor = UIColor.red
             }
         }
     }
     
-    
-
     @IBAction func dateValidation(_ sender: UITextField) {
-        print("fecha")
         searchBtn.isEnabled = false
         if let date = dateTxt.text {
             let validation = brain.dateValidation(date: date)
             if validation{
                 searchBtn.isEnabled = true
-                dateTextValidation.text = "Incorrect Date"
+                dateTextValidation.text = "Great!"
+                dateTextValidation.textColor = UIColor.purple
+            }else{
+                dateTextValidation.text = "Incorrect Date!"
+                dateTextValidation.textColor = UIColor.red
             }
         }
     }

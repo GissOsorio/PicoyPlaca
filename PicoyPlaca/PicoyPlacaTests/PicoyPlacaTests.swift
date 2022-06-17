@@ -24,7 +24,7 @@ class PicoyPlacaTests: XCTestCase {
     func testFunctionPlateValidationToShowFailure() throws{
 //        given
         let brain = Brain()
-        let testPlate = "ABC-DEF"
+        let testPlate = "ABC1234"
 //        when
         let result = brain.plateValidation(plate: testPlate)
 //        then
@@ -34,7 +34,7 @@ class PicoyPlacaTests: XCTestCase {
     func testFunctionDateValidationToShowSuccess() throws{
 //        given
         let brain = Brain()
-        let testDate = "01-01-2022"
+        let testDate = "01/01/2022"
 //        when
         let result = brain.dateValidation(date: testDate)
 //        then
@@ -44,7 +44,7 @@ class PicoyPlacaTests: XCTestCase {
     func testFunctionDateValidationToShowFailure() throws{
 //        given
         let brain = Brain()
-        let testDate = "01-01-11"
+        let testDate = "01/01/11"
 //        when
         let result = brain.dateValidation(date: testDate)
 //        then
@@ -54,7 +54,7 @@ class PicoyPlacaTests: XCTestCase {
     func testFunctionDateToDayWeekSuccess() throws{
 //        given
         let brain = Brain()
-        let testDate = "16-06-2022"
+        let testDate = "06/16/2022"
 //        when
         let result = brain.dateToDayWeek(dateString: testDate)
 //        then
@@ -64,7 +64,7 @@ class PicoyPlacaTests: XCTestCase {
     func testFunctionDateToDayWeekFailure() throws{
 //        given
         let brain = Brain()
-        let testDate = "17-06-2022"
+        let testDate = "06/16/2022"
 //        when
         let result = brain.dateToDayWeek(dateString: testDate)
 //        then
