@@ -53,32 +53,41 @@ class ViewController: UIViewController {
     
 
     @IBAction func plateValidated(_ sender: UITextField) {
-        searchBtn.isEnabled = false
         if let plate = plateTxt.text {
             let validation = brain.plateValidation(plate: plate)
             if validation{
-                searchBtn.isEnabled = true
                 plateTextValidation.text = "Great!"
                 plateTextValidation.textColor = UIColor.purple
+                brain.plateEnable = true
             }else{
                 plateTextValidation.text = "Incorrect Plate!"
                 plateTextValidation.textColor = UIColor.red
+                brain.plateEnable = false
             }
+            updateButton()
         }
     }
     
     @IBAction func dateValidation(_ sender: UITextField) {
-        searchBtn.isEnabled = false
         if let date = dateTxt.text {
             let validation = brain.dateValidation(date: date)
             if validation{
-                searchBtn.isEnabled = true
                 dateTextValidation.text = "Great!"
                 dateTextValidation.textColor = UIColor.purple
+                brain.dateEnable = true
             }else{
                 dateTextValidation.text = "Incorrect Date!"
                 dateTextValidation.textColor = UIColor.red
+                brain.dateEnable = false
             }
+            updateButton()
+        }
+    }
+    func updateButton(){
+        if brain.plateEnable && brain.dateEnable {
+            searchBtn.isEnabled = true
+        }else{
+            searchBtn.isEnabled = false
         }
     }
     

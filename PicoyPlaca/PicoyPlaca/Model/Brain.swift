@@ -20,14 +20,15 @@ struct Brain {
         Interval(name: "morning",start: Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!, end: Calendar.current.date(bySettingHour: 9, minute: 30, second: 0, of: Date())!),
         Interval(name: "afternoon",start: Calendar.current.date(bySettingHour: 16, minute: 0, second: 0, of: Date())!, end: Calendar.current.date(bySettingHour: 19, minute: 30, second: 0, of: Date())!)
     ]
-    
+    var plateEnable = false
+    var dateEnable = false
     func search(plate: String, date: String, time: Date) -> Bool{
         let timeSearch = time.addingTimeInterval(TimeInterval(-5.0 * 3600.0))
         let lastNumber = String(plate.suffix(1))
         if let dayWeek = dateToDayWeek(dateString: date){
             return checkDayWeek(dayWeek: dayWeek, lastNumber: lastNumber,timeSearch:timeSearch)
         }
-        return false
+        return true
     }
     
     func checkDayWeek(dayWeek: String,lastNumber: String, timeSearch: Date) -> Bool{
